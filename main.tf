@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "eu-central-1"
+}
+
 resource "aws_instance" "my_vm" {
   count         = 3
   ami           = var.ami //Ubuntu AMI
